@@ -16,15 +16,15 @@ internal class Program
             WriteInstructions();
             order = Console.ReadLine();
             Console.Clear();
-            if (order.ToLower() == "кодировать")
+            if (order?.ToLower() == "кодировать")
             {
                 Operate = CaesarCipher.Coder.Encode;
             }
-            else if (order.ToLower() == "декодировать")
+            else if (order?.ToLower() == "декодировать")
             {
                 Operate = CaesarCipher.Coder.Decode;
             }
-            else if (order.ToLower() == "выход")
+            else if (order?.ToLower() == "выход")
             {
                 continue;
             }    
@@ -63,7 +63,7 @@ internal class Program
             }
             Console.WriteLine($"Операция завершена успешно. Обработанный файл записан в {outputPath}");            
 
-        } while (order.ToLower() != "выход");
+        } while (order?.ToLower() != "выход");
     }
     static void WriteInstructions()
     {

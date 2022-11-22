@@ -31,7 +31,7 @@ public static class Coder
     }
 
     private static string TransformText(string inputText, int key)
-    {
+    {     
         inputText = inputText.ToLower();
         string outputText = "";
         for (int i = 0; i < inputText.Length; i++)
